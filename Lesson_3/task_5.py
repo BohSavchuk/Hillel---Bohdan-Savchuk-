@@ -5,9 +5,9 @@ random_number = random.randint(1, 10)
 while guesses < 3:
     guess = int(input("Please enter number from 1 to 10:"))
     guesses += 1
-    if guess != random and guesses < 3:
+    if guess != random_number and guesses < 3:
         print('Wrong, try one more time')
-    if guess == random:
+    if guess == random_number:
         break
 
 if guess == random_number:

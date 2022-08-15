@@ -1,9 +1,9 @@
-speed = int(input('Please enter your speed:'))
-time = int(input('Please enter your time:'))
-distance = speed * time
-if speed > 0 and sistance <= 100:
-    print('You are already completed', speed, 'km.', 'Keep it up')
-elif speed < 0 and sistance <= 100:
-    print('You are already completed', speed, 'km.', 'Hurry up')
+v = int(input('Please enter your speed:'))
+t = int(input('Please enter your time:'))
+s = int(v * abs(t))
+if v > 0 and s <= 100:
+    print('You are already completed', s, 'km.', 'Keep it up')
+elif v < 0 and s <= 100:
+    print('You are already completed', abs(s), 'km.', 'Hurry up')
 else:
     print('Congratulations! You are already finished 100km')

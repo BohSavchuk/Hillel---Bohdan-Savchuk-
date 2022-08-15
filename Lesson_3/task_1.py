@@ -1,7 +1,7 @@
-x = int(input('Please enter your number:'))
+x = input('Please enter your number:')
+total = 0
+for a in x:
+   total += int(a)
+print(f'The summary of {x} number is {total}')
 
-c = x % 10
-b = x % 100 // 10
-a = x // 100
 
-print(a + b + c)

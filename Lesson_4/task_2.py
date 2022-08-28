@@ -3,7 +3,7 @@ elements_to_operate = []
 index_of_max = 0
 addition = 1
 max_1 = 0
-Number_of_biggest_element = 0
+number_of_biggest_element = 0
 
 while user_input != 0:
     if user_input > max_1:
@@ -20,7 +20,7 @@ for x in elements_to_operate:
     addition = addition * x
 for c in range(len(elements_to_operate)):
     if elements_to_operate[c] == max_1:
-        Number_of_biggest_element += 1
+        number_of_biggest_element += 1
 
 
 

@@ -8,9 +8,9 @@ import pprint
 
 def min_max_value(integer: int, min_value=0, max_value=100) -> bool:
     """
-
+The function check if the value is > 0 but < 100.
   #  Args:
-   #     integer: int
+   #     integer(int):
 
     #Returns:
      #   data (True|False)
@@ -31,9 +31,9 @@ assert type(min_max_value(1)) == int
 # Cтворіть функцію для перевірки, що отриманий аргумент є числом (інт)
 def is_int(value: Any) -> bool:
     """
-
+Function check if received values are integer
     Args:
-        integer(int):
+        value(Any):
 
     Returns:
         data (True|False)
@@ -58,6 +58,7 @@ URL = 'https://dummyjson.com/carts'
 
 def get_data(url: str = None) -> dict:
     """
+    The function request string and return json
       Args:
           url: str
 
@@ -78,7 +79,7 @@ assert type(get_data(URL)) == dict,'not json (dict)'
 
 def get_cut_string(string: str, length=150) -> str:
     """
-    The function return
+    The function return always 150 symbols. If string contain more, the function will trim it to 150 with replacment of last 3 symbols to '...'.
       Args:
           string (str):str
           length(int): default value 150
@@ -105,6 +106,16 @@ assert get_cut_string("a"*200)[-3:] == '...'
 #написати функцію, котра дозаписує (режим "а") в файл певні текстові дані
 
 def add_to_file (path_to_file: str = 'task_file.txt', data = 'task 2'):
+   '''
+   Function open file and added 'task 2' text
+   Args:
+       path_to_file:
+       data:
+
+   Returns:
+
+   '''
+
     with open(path_to_file,'a', encoding='utf-8') as file:
         file.write(data)
 

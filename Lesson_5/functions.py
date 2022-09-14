@@ -1,29 +1,31 @@
 from typing import Any
-
 import requests
 import pprint
+
+
 
 #створіть функцію для перевірки, що за замовчуванням число не менше 0 та не  більше 100 (потрібно, щоб верхня та нижня межа могли налаштовуватися)
 
 
 def min_max_value(integer: int, min_value=0, max_value=100) -> bool:
     """
-The function check if the value is > 0 but < 100.
-  #  Args:
-   #     integer(int):
 
-    #Returns:
-     #   data (True|False)
+    Args:
+        integer:
+        min_value:
+        max_value:
+
+    Returns:
 
     """
-    variable = integer
+    variable: int = integer
     if min_value < variable < max_value:
        return True
     return False
 
 assert min_max_value(99) == True
 assert min_max_value(123) == False
-assert type(min_max_value(1)) == int
+assert type(min_max_value(1)) == bool
 
 
 
@@ -31,7 +33,7 @@ assert type(min_max_value(1)) == int
 # Cтворіть функцію для перевірки, що отриманий аргумент є числом (інт)
 def is_int(value: Any) -> bool:
     """
-Function check if received values are integer
+    Function check if received values are integer
     Args:
         value(Any):
 
@@ -100,24 +102,21 @@ assert len(get_cut_string("a"*200)) == 150
 assert get_cut_string("a"*200)[-3:] == '...'
 
 
-
-
-
 #написати функцію, котра дозаписує (режим "а") в файл певні текстові дані
 
-def add_to_file (path_to_file: str = 'task_file.txt', data = 'task 2'):
-   '''
-   Function open file and added 'task 2' text
-   Args:
-       path_to_file:
-       data:
 
-   Returns:
+def add_to_file(path_to_file: str = 'high_grade_students.txt', data: str = ''):
+    """
+    Function open file and added 'task 2' text
+    Args:
+        path_to_file:
+        data:
 
-   '''
+    Returns:
+    """
 
-    with open(path_to_file,'a', encoding='utf-8') as file:
-        file.write(data)
+    with open(path_to_file, 'a', encoding='utf-8') as file:
+        file.write(data + '\n')
 
 
 

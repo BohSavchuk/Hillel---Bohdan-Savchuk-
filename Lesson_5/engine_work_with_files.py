@@ -1,8 +1,8 @@
-import pprint
-import functions
-import get_api_url_task_3
+import functions_task2
 
-task_2.add_to_file()
-task_3.add_to_file_1()
+
+
+functions_task2.add_to_file('good_students')
+
 
 

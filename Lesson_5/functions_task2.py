@@ -105,7 +105,7 @@ assert get_cut_string("a"*200)[-3:] == '...'
 #написати функцію, котра дозаписує (режим "а") в файл певні текстові дані
 
 
-def add_to_file(path_to_file: str = 'high_grade_students.txt', data: str = ''):
+def add_to_file(file_name: str = "Good_students", data: str = ''):
     """
     Function open file and added 'task 2' text
     Args:
@@ -115,9 +115,8 @@ def add_to_file(path_to_file: str = 'high_grade_students.txt', data: str = ''):
     Returns:
     """
 
-    with open(path_to_file, 'a', encoding='utf-8') as file:
+    with open(file_name, 'a', encoding='utf-8') as file:
         file.write(data + '\n')
-
 
 
 

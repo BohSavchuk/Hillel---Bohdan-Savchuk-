@@ -22,7 +22,7 @@ now = datetime.datetime.now().date()
 
 
 import message
-import functions
+import functions_task2
 import requests
 import pprint
 import datetime
@@ -34,7 +34,7 @@ now = datetime.datetime.now().date()
 
 
 def school_high_scores(url) -> None:
-    google_data = functions.get_data(url)['data']
+    google_data = functions_task2.get_data(url)['data']
     for dictionary in google_data:
         age = dictionary['age']
         rewards = dictionary['has_rewards']
@@ -43,10 +43,10 @@ def school_high_scores(url) -> None:
         notes = dictionary['notes']
 
         if score >= 90 and rewards and 9 <= age <= 18:
-            result_string = functions.get_cut_string(message.message.format(now, name, message.face_smile, score, notes))
-            functions.add_to_file(data=result_string)
+            result_string = functions_task2.get_cut_string(message.message.format(now, name, message.face_smile, score, notes))
+            functions_task2.add_to_file(data=result_string)
 
-school_high_scores(url)
+
 
 
 

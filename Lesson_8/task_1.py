@@ -1,4 +1,4 @@
-def zip_function (tuple_1, tuple_2):
+def zip_function(tuple_key, tuple_value):
     """
     Function receive 2 tupples and transforms them into 1 dict
     Args:
@@ -8,7 +8,7 @@ def zip_function (tuple_1, tuple_2):
     Returns:
 
     """
-    data = list(zip(tuple_1, tuple_2))
+    data = list(zip(tuple_key, tuple_value))
     return data
 
 tuple_1 = ('Bitcoin', 'Ether', 'Ripple', 'Litecoin')

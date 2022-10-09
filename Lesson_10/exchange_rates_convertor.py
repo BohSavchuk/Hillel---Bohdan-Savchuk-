@@ -1,5 +1,4 @@
 import requests
-import datetime
 from datetime import datetime as dt
 import json
 import calendar
@@ -21,18 +20,17 @@ def currency_validation(currency_from: str, currency_to: str) -> bool:
 
 
 
-def get_todays_date() -> datetime.date:
+def get_todays_date() -> dt.date:
     """Return current data"""
-    date_today = datetime.now()
+    date_today = dt.now()
     return date_today
-
 
 
 
 
 def get_todays_date_str_format() -> str:
     """Return current data in '%Y-%m-%d' format"""
-    date_today = datetime.now().strftime('%Y-%m-%d')
+    date_today = dt.now().strftime('%Y-%m-%d')
     return date_today
 
 
@@ -127,3 +125,5 @@ def save_as_csv(result: list, save: bool):
             data.writerows(result)
 
 
+
+print ("The arguments are: " , str(sys.argv))

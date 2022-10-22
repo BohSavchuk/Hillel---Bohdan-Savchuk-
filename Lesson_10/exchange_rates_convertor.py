@@ -22,7 +22,7 @@ def currency_validation(currency_from: str, currency_to: str) -> bool:
 
 def get_todays_date() -> dt.date:
     """Return current data"""
-    date_today = dt.now()
+    date_today = dt.now().date()
     return date_today
 
 
@@ -36,14 +36,13 @@ def get_todays_date_str_format() -> str:
 
 
 
-def get_data_from_user_terminal() -> list:
+def get_data_from_user_terminal():
     """data from CLI"""
     return sys.argv[1:]
 
 
 
-
-def is_valid_input_date_formate(value) -> bool:
+def is_valid_input_date_format (value) -> bool:
     """Expect date in format data in str format %Y-%m-%d"""
     if not value:
         return False
@@ -73,7 +72,6 @@ def is_valid_input_date_formate(value) -> bool:
         is_valid_day = True
 
     return all([is_valid_year, is_valid_month, is_valid_day])
-
 
 
 def get_date_for_currency_rate() -> str:
@@ -114,10 +112,6 @@ def convertor(c_from: str, c_to: str, amount: float, date: str):
         return print('Wrong format.Right format should be %Y-%m-%d. Check and try again')
 
 
-
-
-
-
 def save_as_csv(result: list, save: bool):
     if save:
         with open('currency_exchange.csv', 'w') as csv_file:
@@ -126,4 +120,3 @@ def save_as_csv(result: list, save: bool):
 
 
 
-print ("The arguments are: " , str(sys.argv))

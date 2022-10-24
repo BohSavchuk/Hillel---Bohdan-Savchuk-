@@ -49,8 +49,9 @@ class Building:
         self.population = random.randint(1, 100)
         self.building_number = building_number
 
-if __name__ == '__main__':
 
+
+if __name__ == '__main__':
     city = City('Antwerp')
     city.add_street()
     city.add_street()
